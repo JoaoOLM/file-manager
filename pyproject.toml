@@ -1,0 +1,30 @@
+[project]
+name = "file-manager"
+version = "0.1.0"
+description = "File manager compiler"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "antlr4-python3-runtime>=4.13.2",
+    "cyclopts>=3.13.1",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.6",
+]
+
+[project.scripts]
+file-manager = "file-manager.main:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff.lint]
+preview = true
+select = ['I', 'F', 'E', 'W', 'PL', 'PT']
+
+[tool.ruff.format]
+preview = true
+quote-style = 'single'
