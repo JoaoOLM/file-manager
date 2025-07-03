@@ -1,0 +1,13 @@
+PASTA_RAIZ "/home/usuario/downloads"
+
+REGRA SE $EXTENSAO EH "pdf" ENTAO MOVER_PARA "/home/usuario/documentos/pdfs"
+
+// Erro léxico: caractere '@' não reconhecido pela gramática
+@!#$%¨&*
+// Erro léxico: um caminho mal formatado que não se encaixa em STRING ou DIRETORIO
+PASTA_INVALIDA C:\Users\Nome User\Docs
+
+REGRA SE $TAMANHO_KB MAIOR_QUE 100 ENTAO COPIAR_PARA "/temp/"
+
+// Erro léxico: String não fechada
+REGRA SE $NOME CONTEM "documento_nao_fechado

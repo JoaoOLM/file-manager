@@ -16,4 +16,4 @@ def run_lexer(input_file: str):
     for token in lexer.getAllTokens():
         tokens.append((Token.symbolicNames[token.type], token.text))
     
-    return tokens
+    return lexer
