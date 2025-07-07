@@ -1,0 +1,2 @@
+PASTA_RAIZ "/home/jotavin/TestFiles/Downloads"
+REGRA SE $EXTENSAO EH "pdf" E $TAMANHO_MB MAIOR_QUE 5 ENTAO MOVER_PARA "/home/jotavin/TestFiles/Relatorios" E APLICAR_TAGS "relatorio", "grande"

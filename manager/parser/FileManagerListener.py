@@ -143,14 +143,5 @@ class FileManagerListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by FileManagerParser#stringComVariaveis.
-    def enterStringComVariaveis(self, ctx:FileManagerParser.StringComVariaveisContext):
-        pass
-
-    # Exit a parse tree produced by FileManagerParser#stringComVariaveis.
-    def exitStringComVariaveis(self, ctx:FileManagerParser.StringComVariaveisContext):
-        pass
-
-
 
 del FileManagerParser

@@ -84,10 +84,5 @@ class FileManagerVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by FileManagerParser#stringComVariaveis.
-    def visitStringComVariaveis(self, ctx:FileManagerParser.StringComVariaveisContext):
-        return self.visitChildren(ctx)
-
-
 
 del FileManagerParser

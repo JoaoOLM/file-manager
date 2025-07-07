@@ -104,36 +104,9 @@ acao            : moverPara
 // Ações específicas
 moverPara       : MOVER_PARA STRING;
 copiarPara      : COPIAR_PARA STRING;
-renomearPara    : RENOMEAR_PARA stringComVariaveis;
+renomearPara    : RENOMEAR_PARA STRING;
 excluir         : EXCLUIR;
 aplicarTags     : APLICAR_TAGS listaTags;
 
 // Lista de tags (ex: "tag1", "tag2")
 listaTags       : STRING (',' STRING)*;
-
-// String que pode conter variáveis (para RENOMEAR_PARA)
-// Esta regra é mais complexa e permite misturar texto literal e variáveis.
-// O ANTLR não permite interpolação de strings diretamente, então você terá que processar isso na análise semântica.
-// Aqui, definimos que é uma string que pode ter os placeholders das variáveis.
-// Ex: "Meu_Arquivo_${DATA_MODIFICACAO}.txt"
-// O lexer vai pegar "Meu_Arquivo_", "$", "DATA_MODIFICACAO", ".txt" separadamente.
-// No parser, vamos tentar agrupar isso.
-// Uma abordagem mais simples para o parser é tratar isso como um STRING completo e fazer a interpolação na fase semântica.
-// Ou podemos ser mais explícitos:
-stringComVariaveis : (STRING_PARTE | VARIAVEL_INTERPOLADA)+;
-
-// STRING_PARTE pega qualquer texto literal que não seja uma variável de metadado
-// Cuidado: Esta é uma regra léxica auxiliar, e pode entrar em conflito se for muito genérica.
-// A abordagem mais robusta é ter um token STRING e na análise semântica, você procura por padrões ${VAR} dentro dela.
-// Para fins da gramática, vamos manter STRING, e você lida com a interpolação posteriormente.
-// Vamos ajustar 'renomearPara' para usar STRING e deixar a lógica de variáveis para a fase semântica.
-// A interpolação de variáveis em strings é geralmente tratada na fase de interpretação/geração de código, não diretamente no parser.
-// O ANTLR simplesmente reconhecerá isso como uma STRING.
-
-// Revisitando: Para simplificar no ANTLR, a string de renomeação será uma STRING normal,
-// e você fará a substituição das variáveis (`$NOME`, etc.) nela durante a fase semântica/interpretação.
-// Então, a regra `stringComVariaveis` será substituída por `STRING`.
-// Isso é uma simplificação que faz sentido para o ANTLR.
-
-// Reajustando a regra de renomearPara:
-// renomearPara : RENOMEAR_PARA STRING; // Onde STRING pode conter as variáveis como "$NOME_BASE"

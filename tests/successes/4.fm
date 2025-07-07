@@ -1,0 +1,2 @@
+PASTA_RAIZ "/home/jotavin/TestFiles/Downloads"
+REGRA SE $EXTENSAO EH "docx" OU $EXTENSAO EH "doc" ENTAO COPIAR_PARA "/home/jotavin/TestFiles/BackupDocs"

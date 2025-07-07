@@ -1,0 +1,2 @@
+PASTA_RAIZ "/home/usuario/documentos"
+SE $NOME EH "arquivo.txt" ENTAO EXCLUIR // Falta a palavra-chave REGRA

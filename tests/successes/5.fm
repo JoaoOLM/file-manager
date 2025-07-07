@@ -1,0 +1,2 @@
+PASTA_RAIZ "/home/jotavin/TestFiles/Downloads"
+REGRA SE $EXTENSAO EH "pdf" E $TAMANHO_KB MENOR_QUE 100 ENTAO MOVER_PARA "/home/jotavin/TestFiles/ArquivosLeves" E RENOMEAR_PARA "LEVE_${NOME_BASE}.${EXTENSAO}" E APLICAR_TAGS "leve", "revisar"

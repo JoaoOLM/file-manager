@@ -1,0 +1,2 @@
+PASTA_RAIZ "/home/usuario/documentos";
+REGRA SE $NOME MAIOR_QUE 100 ENTAO EXCLUIR; // $NOME é STRING, MAIOR_QUE espera NUMERO

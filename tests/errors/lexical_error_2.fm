@@ -1,0 +1,2 @@
+PASTA_RAIZ "/home/usuario/documentos"
+REGRA SE $EXTENSAO EH "pdf ENTAO MOVER_PARA "/arquivados" // Aspas não fechadas

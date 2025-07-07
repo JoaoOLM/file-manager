@@ -1,0 +1,2 @@
+PASTA_RAIZ "/home/jotavin/Downloads"
+REGRA SE $EXTENSAO EH ENTAO MOVER_PARA "/home/jotavin/Downloads/Relatorios" // Falta o valor para a comparação

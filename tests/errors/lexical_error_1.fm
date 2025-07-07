@@ -1,0 +1,2 @@
+PASTA_RAIZ "/home/usuario/documentos"
+REGRA SE $NOME# EH "relatorio" ENTAO MOVER_PARA "/arquivados" // Caractere # não reconhecido

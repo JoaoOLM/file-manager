@@ -1,0 +1,32 @@
+PASTA_RAIZ "/home/jotavin/Downloads"
+
+// 1. Regra: Organizar PDFs
+// PDFs são movidos para a pasta de Documentos e tagueados com "[Downloads]"
+REGRA SE $EXTENSAO EH "pdf"
+ENTAO MOVER_PARA "/home/jotavin/Documentos"
+E RENOMEAR_PARA "[Downloads]${NOME_BASE}.${EXTENSAO}"
+
+// 2. Regra: Organizar Imagens
+// Imagens são movidas para a pasta de Imagens e renomeadas com data e tipo MIME
+REGRA SE $TIPO_MIME CONTEM "image/"
+ENTAO MOVER_PARA "/home/jotavin/Imagens"
+E RENOMEAR_PARA "IMG_${DATA_MODIFICACAO}_${NOME_BASE}.${EXTENSAO}"
+
+// 3. Regra: Arquivar Arquivos Antigos da Pasta de Downloads
+// Arquivos em Downloads criados antes de 2024-01-01 são movidos para uma pasta "temp" dentro de Downloads
+REGRA SE $DATA_CRIACAO MENOR_QUE "2024-01-01"
+ENTAO MOVER_PARA "/home/jotavin/Downloads/temp"
+
+// 4. Regra: Tagear Documentos por Tamanho (P, M, G)
+// Aplica tags "[P]", "[M]", "[G]" com base no tamanho do arquivo em KB
+// P: até 100 KB (Pequeno)
+// M: de 101 KB a 1024 KB (Médio)
+// G: acima de 1024 KB (Grande)
+REGRA SE $EXTENSAO EH "doc" OU $EXTENSAO EH "docx" OU $EXTENSAO EH "odt" OU $EXTENSAO EH "txt" E $TAMANHO_KB IGUAL_OU_MENOR_QUE 100 ENTAO APLICAR_TAGS "P"
+REGRA SE $EXTENSAO EH "doc" OU $EXTENSAO EH "docx" OU $EXTENSAO EH "odt" OU $EXTENSAO EH "txt" E $TAMANHO_KB MAIOR_QUE 100 E $TAMANHO_KB IGUAL_OU_MENOR_QUE 1024 ENTAO APLICAR_TAGS "M"
+REGRA SE $EXTENSAO EH "doc" OU $EXTENSAO EH "docx" OU $EXTENSAO EH "odt" OU $EXTENSAO EH "txt" E $TAMANHO_KB MAIOR_QUE 1024 ENTAO APLICAR_TAGS "G"
+
+// 5. Regra: Mover Arquivos Compactados para Pasta de Arquivos
+// Move arquivos .zip e .rar para uma pasta específica de arquivos compactados
+REGRA SE $EXTENSAO EH "zip" OU $EXTENSAO EH "rar"
+ENTAO MOVER_PARA "/home/jotavin/ArquivosCompactados"

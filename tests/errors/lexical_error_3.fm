@@ -1,0 +1,2 @@
+PASTA_RAIZ "C:\Users\Documentos" 
+REGRA SE $NOME É "documento.txt" ENTAO EXCLUIR // Operador É em vez de EH

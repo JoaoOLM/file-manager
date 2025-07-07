@@ -1,0 +1,2 @@
+PASTA_RAIZ "/home/usuario/documentos"
+REGRA SE $NOME EH "log.txt" ENTAO MOVER_PARA // O caminho de destino está faltando
