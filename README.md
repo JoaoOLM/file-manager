@@ -95,9 +95,9 @@ A linguagem **FileManager** é simples e direta, projetada para expressar regras
 Todo programa FileManager começa com a declaração da pasta raiz, seguida por uma ou mais regras:
 
 ```fm
-PASTA_RAIZ "/caminho/do/diretorio";
+PASTA_RAIZ "/caminho/do/diretorio"
 
-REGRA SE <condicao> ENTAO <acao_1> (E <acao_2>)*;
+REGRA SE <condicao> ENTAO <acao_1> (E <acao_2>)*
 ```
 
 **Atenção:** a pasta raiz deve começar com barra e deve ser um arquivo já existente.
