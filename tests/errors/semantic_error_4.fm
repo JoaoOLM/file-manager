@@ -1,2 +1,2 @@
-PASTA_RAIZ "/pasta/que/nao/existe/abcd";
-REGRA SE $NOME EH "teste.txt" ENTAO EXCLUIR;
+PASTA_RAIZ "/pasta/que/nao/existe/abcd"
+REGRA SE $NOME EH "teste.txt" ENTAO EXCLUIR

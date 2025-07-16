@@ -1,2 +1,2 @@
-PASTA_RAIZ "/home/usuario/documentos";
-REGRA SE $DATA_MODIFICACAO MENOR_QUE "01-01-2024" ENTAO MOVER_PARA "/antigos"; // Formato de data incorreto (esperado YYYY-MM-DD)
+PASTA_RAIZ "/home/usuario/documentos"
+REGRA SE $DATA_MODIFICACAO MENOR_QUE "01-01-2024" ENTAO MOVER_PARA "/antigos" // Formato de data incorreto (esperado YYYY-MM-DD)

@@ -1,2 +1,2 @@
-PASTA_RAIZ "/home/usuario/documentos";
-REGRA SE $TIPO_DE_ARQUIVO EH "pdf" ENTAO EXCLUIR; // $TIPO_DE_ARQUIVO não é uma variável de metadado válida
+PASTA_RAIZ "/home/usuario/documentos"
+REGRA SE $TIPO_DE_ARQUIVO EH "pdf" ENTAO EXCLUIR // $TIPO_DE_ARQUIVO não é uma variável de metadado válida

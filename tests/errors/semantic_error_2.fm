@@ -1,2 +1,2 @@
-PASTA_RAIZ "/home/usuario/documentos";
-REGRA SE $TAMANHO_KB CONTEM "abc" ENTAO COPIAR_PARA "/temp"; // $TAMANHO_KB é NUMERO, CONTEM espera STRING
+PASTA_RAIZ "/home/usuario/documentos"
+REGRA SE $TAMANHO_KB CONTEM "abc" ENTAO COPIAR_PARA "/temp" // $TAMANHO_KB é NUMERO, CONTEM espera STRING
