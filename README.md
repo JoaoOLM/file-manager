@@ -234,31 +234,6 @@ REGRA SE $EXTENSAO EH "zip" OU $EXTENSAO EH "rar"
 ENTAO MOVER_PARA "/home/jotavin/ArquivosCompactados"
 ```
 
----
-
-## 🎬 Como Adicionar seu Vídeo de Demonstração
-
-Para personalizar a seção de demonstração acima, você tem algumas opções:
-
-### Opção 1: Vídeo do YouTube (Recomendado)
-1. Faça upload do seu vídeo de demonstração no YouTube
-2. Copie o ID do vídeo da URL (ex: `https://youtube.com/watch?v=abc123` → ID: `abc123`)
-3. Substitua `VIDEO_ID` no README pelo ID real
-
-### Opção 2: GIF Animado
-1. Crie um GIF da demonstração usando ferramentas como:
-   - **asciinema** + **asciicast2gif** para terminais
-   - **LICEcap** ou **Kap** para desktop
-   - **ffmpeg** para converter vídeos: `ffmpeg -i demo.mp4 -vf "scale=800:-1" demo.gif`
-2. Adicione o GIF na pasta `assets/` do repositório
-3. Descomente e ajuste a linha do GIF no README
-
-### Opção 3: Vídeo MP4 (até 25MB)
-1. Faça upload do vídeo diretamente no GitHub (issues/PR)
-2. Copie o link gerado e substitua no README
-
----
-
 ## Contributors
 
 - Antonio Cicero Azevedo - 811455
